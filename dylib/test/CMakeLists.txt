@@ -10,6 +10,7 @@ add_executable(testMain ${All_SOURCES})
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../src)
 
 IF (WIN32)
+    target_link_libraries(testMain ${CMAKE_CURRENT_SOURCE_DIR}/../src/Debug/testDyLibrary.dll)
 	MESSAGE(STATUS "Now is windows")
 ELSEIF (APPLE)
     MESSAGE(STATUS "Now is Apple systens.")
